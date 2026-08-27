@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Waffle with ice cream">
+<defs><linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d2b1c"/><stop offset="1" stop-color="#1a120d"/></linearGradient>
+<linearGradient id="wf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8b96f"/><stop offset="1" stop-color="#c28f45"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#b2)"/>
+<circle cx="200" cy="200" r="140" fill="none" stroke="#d9ab6a" stroke-opacity=".13" stroke-width="1.5"/>
+<ellipse cx="200" cy="318" rx="112" ry="17" fill="#000" opacity=".3"/>
+<rect x="86" y="196" width="228" height="112" rx="16" fill="url(#wf)"/>
+<g fill="#a9762f" opacity=".55">
+<rect x="106" y="214" width="34" height="34" rx="5"/><rect x="152" y="214" width="34" height="34" rx="5"/>
+<rect x="198" y="214" width="34" height="34" rx="5"/><rect x="244" y="214" width="34" height="34" rx="5"/>
+<rect x="106" y="258" width="34" height="34" rx="5"/><rect x="152" y="258" width="34" height="34" rx="5"/>
+<rect x="198" y="258" width="34" height="34" rx="5"/><rect x="244" y="258" width="34" height="34" rx="5"/>
+</g>
+<circle cx="150" cy="176" r="42" fill="#faf3e6"/>
+<circle cx="234" cy="168" r="46" fill="#e7b7c4"/>
+<path d="M104 196c14-26 40-18 46-2M250 196c16-24 44-16 50 0" fill="none" stroke="#5a3418" stroke-width="9" stroke-linecap="round" opacity=".85"/>
+<path d="M108 196c22 22 62 30 92 30s70-8 92-30" fill="none" stroke="#4a2a12" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+<circle cx="234" cy="120" r="13" fill="#c8443f"/>
+<path d="M234 108c4-14 14-18 22-16" stroke="#6fae87" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

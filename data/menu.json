@@ -1,0 +1,117 @@
+{
+  "categories": [
+    {
+      "id": "hot",
+      "nameAr": "قهوة ومشروبات ساخنة",
+      "nameEn": "Coffee & Hot Drinks",
+      "items": [
+        { "ar": "هوت شوكليت فيريرو روشيه", "en": "Ferrero Rocher Hot Chocolate", "price": 3.50, "tag": "popular", "descAr": "الأكثر طلباً — شوكولاتة غنية مع بندق محمّص", "descEn": "Our signature — rich chocolate with roasted hazelnut" },
+        { "ar": "إسبرسو", "en": "Espresso", "price": 1.25 },
+        { "ar": "إسبرسو دوبل", "en": "Double Espresso", "price": 1.75 },
+        { "ar": "قهوة تركية", "en": "Turkish Coffee", "price": 1.50 },
+        { "ar": "قهوة عربية (دلّة)", "en": "Arabic Coffee (pot)", "price": 2.50 },
+        { "ar": "كابتشينو", "en": "Cappuccino", "price": 2.25 },
+        { "ar": "كافيه لاتيه", "en": "Caffè Latte", "price": 2.50 },
+        { "ar": "فلات وايت", "en": "Flat White", "price": 2.75 },
+        { "ar": "لاتيه إسباني", "en": "Spanish Latte", "price": 3.00, "tag": "chef" },
+        { "ar": "كراميل ماكياتو", "en": "Caramel Macchiato", "price": 3.25 },
+        { "ar": "ماتشا لاتيه ساخن", "en": "Hot Matcha Latte", "price": 3.50 },
+        { "ar": "هوت شوكليت كلاسيك", "en": "Classic Hot Chocolate", "price": 3.00 },
+        { "ar": "سحلب بالمكسرات", "en": "Sahlab with Nuts", "price": 3.00 },
+        { "ar": "شاي / شاي أخضر", "en": "Tea / Green Tea", "price": 1.00 },
+        { "ar": "أعشاب (نعنع، يانسون، زهورات)", "en": "Herbal Infusions (mint, anise, zhourat)", "price": 1.50 }
+      ]
+    },
+    {
+      "id": "cold",
+      "nameAr": "مشروبات باردة",
+      "nameEn": "Cold Drinks",
+      "items": [
+        { "ar": "آيس ماتشا توت أحمر", "en": "Iced Matcha Red Berries", "price": 3.75, "tag": "popular", "descAr": "ماتشا يابانية مع توت أحمر طازج", "descEn": "Japanese matcha with fresh red berries" },
+        { "ar": "آيس آيريش كريم", "en": "Ice Irish Cream", "price": 3.50, "tag": "popular" },
+        { "ar": "آيس لاتيه", "en": "Iced Latte", "price": 2.75 },
+        { "ar": "آيس لاتيه إسباني", "en": "Iced Spanish Latte", "price": 3.25 },
+        { "ar": "آيس كراميل ماكياتو", "en": "Iced Caramel Macchiato", "price": 3.50 },
+        { "ar": "آيس أمريكانو", "en": "Iced Americano", "price": 2.25 },
+        { "ar": "فرابتشينو (كراميل / موكا / بسكوف)", "en": "Frappuccino (Caramel / Mocha / Biscoff)", "price": 3.75 },
+        { "ar": "أفوجاتو", "en": "Affogato", "price": 3.25 },
+        { "ar": "آيس تي (خوخ / ليمون)", "en": "Iced Tea (Peach / Lemon)", "price": 2.50 }
+      ]
+    },
+    {
+      "id": "shakes",
+      "nameAr": "ميلك شيك وسموذي",
+      "nameEn": "Milkshakes & Smoothies",
+      "items": [
+        { "ar": "ميلك شيك كيندر بوينو سبيشال", "en": "Special Kinder Bueno Milkshake", "price": 4.25, "tag": "popular", "descAr": "كيندر بوينو كامل فوق الكاسة", "descEn": "Topped with a whole Kinder Bueno" },
+        { "ar": "ميلك شيك فيريرو روشيه", "en": "Ferrero Rocher Milkshake", "price": 4.25 },
+        { "ar": "ميلك شيك لوتس", "en": "Lotus Biscoff Milkshake", "price": 4.00 },
+        { "ar": "ميلك شيك أوريو", "en": "Oreo Milkshake", "price": 3.75 },
+        { "ar": "ميلك شيك فانيلا / شوكولاتة / فراولة", "en": "Vanilla / Chocolate / Strawberry Shake", "price": 3.25 },
+        { "ar": "سموذي مانجا وباشون", "en": "Mango & Passion Smoothie", "price": 3.75 },
+        { "ar": "سموذي توت مشكّل", "en": "Mixed Berries Smoothie", "price": 3.75 },
+        { "ar": "سموذي أفوكادو وعسل", "en": "Avocado & Honey Smoothie", "price": 4.00 }
+      ]
+    },
+    {
+      "id": "juice",
+      "nameAr": "عصائر طازجة وموهيتو",
+      "nameEn": "Fresh Juices & Mojito",
+      "items": [
+        { "ar": "عصير مانجا فرغلي طازج", "en": "Fresh Farghali Mango Juice", "price": 4.00, "tag": "popular" },
+        { "ar": "كوكتيل السعادة الصحي", "en": "Happiness Healthy Cocktail", "price": 4.50, "tag": "popular", "descAr": "خلطة فواكه وعسل — بدون سكر مضاف", "descEn": "Fruit and honey blend — no added sugar" },
+        { "ar": "كوكتيل فواكه فرغلي", "en": "Farghali Fruit Cocktail", "price": 4.50 },
+        { "ar": "عصير برتقال طازج", "en": "Fresh Orange Juice", "price": 2.75 },
+        { "ar": "ليمون بالنعنع", "en": "Lemon & Mint", "price": 2.50 },
+        { "ar": "موهيتو كلاسيك", "en": "Classic Mojito", "price": 3.00 },
+        { "ar": "موهيتو باشن / بلو / فراولة", "en": "Passion / Blue / Strawberry Mojito", "price": 3.25 },
+        { "ar": "ديتوكس (كرفس، تفاح، زنجبيل)", "en": "Detox (celery, apple, ginger)", "price": 3.75 }
+      ]
+    },
+    {
+      "id": "sweets",
+      "nameAr": "كريب وواقل وبان كيك",
+      "nameEn": "Crepe, Waffle & Pancakes",
+      "items": [
+        { "ar": "كريب كيندر", "en": "Kinder Crepe", "price": 5.00, "tag": "popular" },
+        { "ar": "واقل بالنكهات مع الآيس كريم", "en": "Waffle Flavors with Ice Cream", "price": 5.00, "tag": "popular" },
+        { "ar": "كريب فيريرو", "en": "Ferrero Crepe", "price": 5.25 },
+        { "ar": "كريب لوتس", "en": "Lotus Crepe", "price": 4.75 },
+        { "ar": "كريب نوتيلا", "en": "Nutella Crepe", "price": 4.00 },
+        { "ar": "بان كيك كلاسيك", "en": "Classic Pancakes", "price": 4.00, "tag": "popular" },
+        { "ar": "بان كيك نوتيلا وموز", "en": "Nutella & Banana Pancakes", "price": 4.75 },
+        { "ar": "فوندو شوكولاتة بلجيكي (لشخصين)", "en": "Belgian Chocolate Fondue (for 2)", "price": 7.50, "tag": "chef" },
+        { "ar": "آيس كريم ٣ كور", "en": "Ice Cream — 3 Scoops", "price": 3.00 },
+        { "ar": "سلطة فواكه بالقشطة", "en": "Fruit Salad with Cream", "price": 4.00 }
+      ]
+    },
+    {
+      "id": "bites",
+      "nameAr": "مأكولات خفيفة",
+      "nameEn": "Light Bites",
+      "items": [
+        { "ar": "كلوب ساندويش مع بطاطا", "en": "Club Sandwich with Fries", "price": 5.50 },
+        { "ar": "كريب دجاج (سيفوري)", "en": "Savory Chicken Crepe", "price": 5.25 },
+        { "ar": "ناتشوز بالجبنة", "en": "Nachos with Cheese", "price": 4.25 },
+        { "ar": "أصابع موزاريلا", "en": "Mozzarella Sticks", "price": 4.00 },
+        { "ar": "بطاطا بالجبنة", "en": "Cheese Fries", "price": 3.50 },
+        { "ar": "كرواسون (جبنة / زعتر / شوكولاتة)", "en": "Croissant (cheese / zaatar / chocolate)", "price": 2.25 }
+      ]
+    },
+    {
+      "id": "shisha",
+      "nameAr": "أرجيلة",
+      "nameEn": "Shisha",
+      "items": [
+        { "ar": "تفاحتين", "en": "Two Apples", "price": 4.50, "tag": "popular" },
+        { "ar": "نعنع / ليمون نعنع", "en": "Mint / Lemon-Mint", "price": 4.50 },
+        { "ar": "عنب نعنع", "en": "Grape & Mint", "price": 4.75 },
+        { "ar": "بلوبيري / بطيخ", "en": "Blueberry / Watermelon", "price": 4.75 },
+        { "ar": "لوف ٦٦ / علكة نعنع", "en": "Love 66 / Gum Mint", "price": 5.00 },
+        { "ar": "ميكس جونيا الخاص", "en": "Jonia Special Mix", "price": 5.50, "tag": "chef" },
+        { "ar": "تغيير رأس", "en": "Head Change", "price": 3.00 },
+        { "ar": "فحم إضافي", "en": "Extra Coals", "price": 0.50 }
+      ]
+    }
+  ]
+}

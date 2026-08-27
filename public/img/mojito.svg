@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Mojito">
+<defs><linearGradient id="b4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#243021"/><stop offset="1" stop-color="#141a12"/></linearGradient>
+<linearGradient id="mj" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe6a8"/><stop offset="1" stop-color="#6aa85f"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#b4)"/>
+<circle cx="200" cy="200" r="142" fill="none" stroke="#d9ab6a" stroke-opacity=".14" stroke-width="1.5"/>
+<ellipse cx="200" cy="348" rx="70" ry="12" fill="#000" opacity=".33"/>
+<path d="M148 118h104l-12 216c-1 10-9 16-19 16h-42c-10 0-18-6-19-16z" fill="url(#mj)" opacity=".9"/>
+<path d="M148 118h104l-2 34H150z" fill="#e9f6df" opacity=".55"/>
+<g fill="#3f7a3a" opacity=".9">
+<ellipse cx="176" cy="196" rx="15" ry="9" transform="rotate(-24 176 196)"/>
+<ellipse cx="222" cy="236" rx="15" ry="9" transform="rotate(18 222 236)"/>
+<ellipse cx="186" cy="286" rx="13" ry="8" transform="rotate(-12 186 286)"/>
+</g>
+<g fill="#f7f1e8" opacity=".65">
+<circle cx="170" cy="242" r="7"/><circle cx="212" cy="188" r="6"/><circle cx="204" cy="300" r="5"/><circle cx="232" cy="272" r="6"/>
+</g>
+<rect x="212" y="60" width="12" height="86" rx="6" fill="#d9ab6a" transform="rotate(11 218 103)"/>
+<circle cx="176" cy="118" r="26" fill="#d8e86a"/><path d="M176 92a26 26 0 0 0 0 52z" fill="#eef59a"/>
+<path d="M164 74c14-16 34-14 44-2" stroke="#6fae87" stroke-width="8" fill="none" stroke-linecap="round"/>
+</svg>

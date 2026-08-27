@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لوحة التحكم — وينك كافيه</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23d9ab6a'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body dir="rtl">
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M6 7l1 13a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-13"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16.1L2.2 21.2a.5.5 0 0 0 .6.6l5.2-1.3A10.4 10.4 0 0 0 20.5 3.5zM12.5 20a8.6 8.6 0 0 1-4.4-1.2l-.3-.2-3.2.8.9-3.1-.2-.3a8.6 8.6 0 1 1 7.2 4z"/><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.2-.7.1-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.6a.6.6 0 0 0 0-.6L9 6.6c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.8 5.8 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6 16 16 0 0 0 1.7.6 4.2 4.2 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h13v6a6.5 6.5 0 0 1-13 0z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M3 21h16"/></symbol>
+</svg>
+
+<div class="glow" aria-hidden="true"></div>
+
+<!-- login -->
+<div id="loginView" style="display:none">
+  <div class="login-card">
+    <div style="text-align:center;margin-bottom:24px">
+      <span class="mark" style="width:52px;height:52px;border-radius:16px;background:linear-gradient(145deg,var(--gold),#a97b3d);display:inline-grid;place-items:center;color:#241708"><svg width="28" height="28"><use href="#i-cup"/></svg></span>
+      <h2 style="font-size:22px;margin:14px 0 4px" data-t="login.title">لوحة تحكم وينك</h2>
+      <p style="color:var(--muted-2);margin:0;font-size:14px" data-t="login.sub">أدخل كلمة المرور للمتابعة</p>
+    </div>
+    <div id="loginAlert"></div>
+    <div class="field">
+      <label for="pw" data-t="login.pw">كلمة المرور</label>
+      <input type="password" id="pw" autocomplete="current-password">
+    </div>
+    <button class="btn btn-gold" id="loginBtn" style="width:100%" type="button" data-t="login.go">دخول</button>
+    <p style="text-align:center;margin:18px 0 0"><a href="/" style="color:var(--muted-2);font-size:13.5px" data-t="login.back">← رجوع للموقع</a></p>
+  </div>
+</div>
+
+<!-- dashboard -->
+<div id="dashView" style="display:none">
+  <div class="nav"><div class="wrap" style="max-width:1280px">
+    <a class="brand" href="/">
+      <span class="mark"><svg><use href="#i-cup"/></svg></span>
+      <span><b data-t="dash.title">لوحة التحكم</b><span>WINK CAFE</span></span>
+    </a>
+    <div style="margin-inline-start:auto;display:flex;gap:9px;align-items:center">
+      <button class="langbtn" id="langBtn" type="button">English</button>
+      <a class="btn btn-ghost btn-sm" href="/" data-t="dash.site">الموقع</a>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn" type="button" data-t="dash.logout">خروج</button>
+    </div>
+  </div></div>
+
+  <div class="admin-shell">
+    <div class="stats" id="stats"></div>
+
+    <div class="admin-tabs">
+      <button class="active" data-tab="bookings" data-t="tab.bookings">الحجوزات</button>
+      <button data-tab="matches" data-t="tab.matches">المباريات</button>
+      <button data-tab="blackouts" data-t="tab.blackouts">أيام الإغلاق</button>
+      <button data-tab="messages" data-t="tab.messages">الرسائل</button>
+    </div>
+
+    <!-- bookings -->
+    <div data-panel="bookings">
+      <div class="toolbar">
+        <select id="fStatus">
+          <option value="all" data-t="f.all">كل الحالات</option>
+          <option value="pending" data-t="st.pending">بانتظار التأكيد</option>
+          <option value="confirmed" data-t="st.confirmed">مؤكّد</option>
+          <option value="seated" data-t="st.seated">على الطاولة</option>
+          <option value="cancelled" data-t="st.cancelled">ملغي</option>
+          <option value="no_show" data-t="st.no_show">ما حضر</option>
+        </select>
+        <input type="date" id="fFrom" title="from">
+        <input type="date" id="fTo" title="to">
+        <input type="text" id="fQ" data-tph="f.search" placeholder="بحث بالاسم أو الرقم أو كود الحجز">
+        <button class="btn btn-ghost btn-sm" id="applyF" type="button" data-t="f.apply">تطبيق</button>
+        <button class="btn btn-ghost btn-sm" id="todayF" type="button" data-t="f.today">حجوزات اليوم</button>
+        <span style="margin-inline-start:auto"></span>
+        <a class="btn btn-ghost btn-sm" href="/api/admin/export.csv"><svg><use href="#i-dl"/></svg><span data-t="f.export">تصدير CSV</span></a>
+      </div>
+      <div class="tablewrap"><table>
+        <thead><tr>
+          <th data-t="th.code">الكود</th><th data-t="th.when">التاريخ والوقت</th><th data-t="th.name">الاسم</th>
+          <th data-t="th.phone">الهاتف</th><th data-t="th.guests">عدد</th><th data-t="th.area">القسم</th>
+          <th data-t="th.extra">تفاصيل</th><th data-t="th.status">الحالة</th><th></th>
+        </tr></thead>
+        <tbody id="bkRows"></tbody>
+      </table></div>
+    </div>
+
+    <!-- matches -->
+    <div data-panel="matches" style="display:none">
+      <div class="card" style="margin-bottom:20px">
+        <h3 style="margin-top:0;font-size:18px" data-t="mt.add">أضف مباراة للعرض على الموقع</h3>
+        <div class="row-3">
+          <div class="field"><label data-t="mt.comp">البطولة</label><input type="text" id="mComp" placeholder="Champions League"></div>
+          <div class="field"><label data-t="mt.a">الفريق الأول</label><input type="text" id="mA" placeholder="Real Madrid"></div>
+          <div class="field"><label data-t="mt.b">الفريق الثاني</label><input type="text" id="mB" placeholder="Barcelona"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label data-t="mt.time">وقت البداية</label><input type="datetime-local" id="mKick"></div>
+          <div class="field"><label data-t="mt.note">ملاحظة</label><input type="text" id="mNote" data-tph="mt.notePh" placeholder="شاشة كبيرة + صوت"></div>
+        </div>
+        <div id="mAlert"></div>
+        <button class="btn btn-gold btn-sm" id="addMatch" type="button" data-t="mt.save">أضف المباراة</button>
+      </div>
+      <div class="tablewrap"><table style="min-width:640px">
+        <thead><tr><th data-t="mt.time">وقت البداية</th><th data-t="mt.comp">البطولة</th><th data-t="mt.teams">الفريقان</th><th data-t="mt.note">ملاحظة</th><th></th></tr></thead>
+        <tbody id="mtRows"></tbody>
+      </table></div>
+    </div>
+
+    <!-- blackouts -->
+    <div data-panel="blackouts" style="display:none">
+      <div class="card" style="margin-bottom:20px">
+        <h3 style="margin-top:0;font-size:18px" data-t="bo.add">أضف يوم إغلاق</h3>
+        <p style="color:var(--muted);font-size:14px;margin-top:0" data-t="bo.sub">الأيام المضافة هون بتختفي من خيارات الحجز على الموقع.</p>
+        <div class="row">
+          <div class="field"><label data-t="bo.date">التاريخ</label><input type="date" id="boDate"></div>
+          <div class="field"><label data-t="bo.reason">السبب</label><input type="text" id="boReason" data-tph="bo.reasonPh" placeholder="إجازة / صيانة / مناسبة خاصة"></div>
+        </div>
+        <button class="btn btn-gold btn-sm" id="addBo" type="button" data-t="bo.save">أضف اليوم</button>
+      </div>
+      <div class="tablewrap"><table style="min-width:520px">
+        <thead><tr><th data-t="bo.date">التاريخ</th><th data-t="bo.reason">السبب</th><th></th></tr></thead>
+        <tbody id="boRows"></tbody>
+      </table></div>
+    </div>
+
+    <!-- messages -->
+    <div data-panel="messages" style="display:none">
+      <div class="tablewrap"><table style="min-width:720px">
+        <thead><tr><th data-t="th.when">التاريخ</th><th data-t="th.name">الاسم</th><th data-t="ms.contact">وسيلة التواصل</th><th data-t="ms.msg">الرسالة</th><th></th></tr></thead>
+        <tbody id="msRows"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const esc = (s) => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+  const DICT = {
+    ar: {
+      'login.title':'لوحة تحكم وينك','login.sub':'أدخل كلمة المرور للمتابعة','login.pw':'كلمة المرور',
+      'login.go':'دخول','login.back':'← رجوع للموقع','login.bad':'كلمة المرور غير صحيحة.',
+      'dash.title':'لوحة التحكم','dash.site':'الموقع','dash.logout':'خروج',
+      'tab.bookings':'الحجوزات','tab.matches':'المباريات','tab.blackouts':'أيام الإغلاق','tab.messages':'الرسائل',
+      'f.all':'كل الحالات','f.apply':'تطبيق','f.today':'حجوزات اليوم','f.export':'تصدير CSV',
+      'f.search':'بحث بالاسم أو الرقم أو كود الحجز',
+      'th.code':'الكود','th.when':'التاريخ والوقت','th.name':'الاسم','th.phone':'الهاتف','th.guests':'عدد',
+      'th.area':'القسم','th.extra':'تفاصيل','th.status':'الحالة',
+      'st.pending':'بانتظار التأكيد','st.confirmed':'مؤكّد','st.seated':'على الطاولة','st.cancelled':'ملغي','st.no_show':'ما حضر',
+      'stat.today':'حجوزات اليوم','stat.guests':'ضيوف اليوم','stat.pending':'بانتظار التأكيد','stat.week':'خلال ٧ أيام','stat.total':'إجمالي الحجوزات',
+      'mt.add':'أضف مباراة للعرض على الموقع','mt.comp':'البطولة','mt.a':'الفريق الأول','mt.b':'الفريق الثاني',
+      'mt.time':'وقت البداية','mt.note':'ملاحظة','mt.notePh':'شاشة كبيرة + صوت','mt.save':'أضف المباراة','mt.teams':'الفريقان',
+      'mt.err':'عبّي البطولة والفريقين ووقت البداية.','mt.none':'ما في مباريات مضافة.',
+      'bo.add':'أضف يوم إغلاق','bo.sub':'الأيام المضافة هون بتختفي من خيارات الحجز على الموقع.',
+      'bo.date':'التاريخ','bo.reason':'السبب','bo.reasonPh':'إجازة / صيانة / مناسبة خاصة','bo.save':'أضف اليوم','bo.none':'ما في أيام إغلاق.',
+      'ms.contact':'وسيلة التواصل','ms.msg':'الرسالة','ms.none':'ما في رسائل.','ms.done':'تم',
+      'bk.none':'ما في حجوزات تطابق الفلتر.','shisha':'أرجيلة','del':'حذف','confirmDel':'متأكد من حذف الحجز؟',
+      'occ.casual':'قعدة عادية','occ.match':'مشاهدة مباراة','occ.birthday':'عيد ميلاد','occ.business':'اجتماع عمل','occ.family':'قعدة عائلية',
+      'area.indoor':'الصالة الداخلية','area.terrace':'التراس','area.match':'ركن المباريات','area.private':'جلسة خاصة'
+    },
+    en: {
+      'login.title':'Wink admin','login.sub':'Enter the password to continue','login.pw':'Password',
+      'login.go':'Sign in','login.back':'← Back to site','login.bad':'Wrong password.',
+      'dash.title':'Dashboard','dash.site':'Site','dash.logout':'Sign out',
+      'tab.bookings':'Bookings','tab.matches':'Matches','tab.blackouts':'Closed days','tab.messages':'Messages',
+      'f.all':'All statuses','f.apply':'Apply','f.today':"Today's bookings",'f.export':'Export CSV',
+      'f.search':'Search name, phone or code',
+      'th.code':'Code','th.when':'Date & time','th.name':'Name','th.phone':'Phone','th.guests':'Pax',
+      'th.area':'Area','th.extra':'Details','th.status':'Status',
+      'st.pending':'Pending','st.confirmed':'Confirmed','st.seated':'Seated','st.cancelled':'Cancelled','st.no_show':'No-show',
+      'stat.today':'Bookings today','stat.guests':'Guests today','stat.pending':'Awaiting confirmation','stat.week':'Next 7 days','stat.total':'Total bookings',
+      'mt.add':'Add a match to show on the site','mt.comp':'Competition','mt.a':'Home team','mt.b':'Away team',
+      'mt.time':'Kick-off','mt.note':'Note','mt.notePh':'Big screen + sound','mt.save':'Add match','mt.teams':'Teams',
+      'mt.err':'Fill in competition, both teams and kick-off time.','mt.none':'No matches added yet.',
+      'bo.add':'Add a closed day','bo.sub':'Days added here disappear from the booking options on the site.',
+      'bo.date':'Date','bo.reason':'Reason','bo.reasonPh':'Holiday / maintenance / private event','bo.save':'Add day','bo.none':'No closed days.',
+      'ms.contact':'Contact','ms.msg':'Message','ms.none':'No messages.','ms.done':'Done',
+      'bk.none':'No bookings match this filter.','shisha':'shisha','del':'Delete','confirmDel':'Delete this booking?',
+      'occ.casual':'Casual','occ.match':'Match','occ.birthday':'Birthday','occ.business':'Business','occ.family':'Family',
+      'area.indoor':'Indoor','area.terrace':'Terrace','area.match':'Match corner','area.private':'Private booth'
+    }
+  };
+  let LANG = 'ar';
+  const t = (k) => (DICT[LANG][k] !== undefined ? DICT[LANG][k] : (DICT.ar[k] || k));
+
+  function applyLang(l) {
+    LANG = l;
+    const rtl = l === 'ar';
+    document.documentElement.lang = l;
+    document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+    document.body.dir = rtl ? 'rtl' : 'ltr';
+    $('#langBtn').textContent = rtl ? 'English' : 'العربية';
+    $$('[data-t]').forEach((el) => { el.textContent = t(el.dataset.t); });
+    $$('[data-tph]').forEach((el) => { el.placeholder = t(el.dataset.tph); });
+    if ($('#dashView').style.display !== 'none') refreshAll();
+  }
+
+  async function api(url, opts) {
+    const res = await fetch(url, Object.assign({ headers: { 'Content-Type': 'application/json' } }, opts));
+    let data = null; try { data = await res.json(); } catch (e) {}
+    return { ok: res.ok, status: res.status, data };
+  }
+
+  function alertBox(el, kind, msg) {
+    const icon = kind === 'ok' ? '#i-check' : '#i-alert';
+    el.innerHTML = msg ? `<div class="alert ${kind}"><svg><use href="${icon}"/></svg><span>${esc(msg)}</span></div>` : '';
+  }
+
+  /* ---------- auth ---------- */
+  async function checkAuth() {
+    const r = await api('/api/admin/me');
+    const authed = r.data && r.data.ok;
+    $('#loginView').style.display = authed ? 'none' : 'block';
+    $('#dashView').style.display = authed ? 'block' : 'none';
+    if (authed) refreshAll();
+    return authed;
+  }
+
+  async function login() {
+    const r = await api('/api/admin/login', { method: 'POST', body: JSON.stringify({ password: $('#pw').value }) });
+    if (r.ok && r.data && r.data.ok) { $('#pw').value = ''; alertBox($('#loginAlert'), '', ''); checkAuth(); }
+    else alertBox($('#loginAlert'), 'err', t('login.bad'));
+  }
+
+  /* ---------- stats ---------- */
+  async function loadStats() {
+    const r = await api('/api/admin/stats');
+    if (!r.ok || !r.data) return;
+    const s = r.data.stats;
+    const cells = [
+      ['stat.today', s.todayCount], ['stat.guests', s.todayGuests],
+      ['stat.pending', s.pending], ['stat.week', s.upcoming7], ['stat.total', s.total]
+    ];
+    $('#stats').innerHTML = cells.map(([k, v]) =>
+      `<div class="stat"><b>${v}</b><span>${esc(t(k))}</span></div>`).join('');
+  }
+
+  /* ---------- bookings ---------- */
+  function statusSelect(b) {
+    const opts = ['pending','confirmed','seated','cancelled','no_show'];
+    return `<select data-id="${b.id}" class="stSel" style="padding:6px 10px;font-size:13px;width:auto">
+      ${opts.map((o) => `<option value="${o}" ${b.status === o ? 'selected' : ''}>${esc(t('st.' + o))}</option>`).join('')}
+    </select>`;
+  }
+
+  async function loadBookings() {
+    const p = new URLSearchParams();
+    p.set('status', $('#fStatus').value);
+    if ($('#fFrom').value) p.set('from', $('#fFrom').value);
+    if ($('#fTo').value) p.set('to', $('#fTo').value);
+    if ($('#fQ').value.trim()) p.set('q', $('#fQ').value.trim());
+
+    const r = await api('/api/admin/bookings?' + p.toString());
+    const rows = (r.data && r.data.bookings) || [];
+    const tb = $('#bkRows');
+    if (!rows.length) { tb.innerHTML = `<tr><td colspan="9" style="text-align:center;color:var(--muted-2);padding:34px">${esc(t('bk.none'))}</td></tr>`; return; }
+
+    tb.innerHTML = rows.map((b) => {
+      const wa = 'https://wa.me/' + b.phone.replace(/[^\d]/g, '');
+      const extra = [
+        b.shisha ? `${b.shisha_count} ${t('shisha')}` : '',
+        t('occ.' + b.occasion) || b.occasion,
+        b.notes ? esc(b.notes) : ''
+      ].filter(Boolean).join(' · ');
+      return `<tr>
+        <td class="mono" style="color:var(--gold);font-weight:700">${esc(b.code)}</td>
+        <td class="mono">${esc(b.date)}<br><span style="color:var(--muted-2)">${esc(b.time)}</span></td>
+        <td>${esc(b.name)}${b.email ? `<br><span style="color:var(--muted-2);font-size:12px">${esc(b.email)}</span>` : ''}</td>
+        <td class="mono" dir="ltr">${esc(b.phone)}</td>
+        <td style="font-weight:700">${b.guests}</td>
+        <td>${esc(t('area.' + b.area) || b.area)}</td>
+        <td style="max-width:230px;font-size:13px;color:var(--muted)">${extra || '—'}</td>
+        <td>${statusSelect(b)}</td>
+        <td style="white-space:nowrap">
+          <a class="iconbtn" href="${wa}" target="_blank" rel="noopener" title="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+          <button class="iconbtn delBk" data-id="${b.id}" title="${esc(t('del'))}"><svg><use href="#i-trash"/></svg></button>
+        </td>
+      </tr>`;
+    }).join('');
+
+    $$('.stSel').forEach((sel) => sel.addEventListener('change', async () => {
+      await api('/api/admin/bookings/' + sel.dataset.id, { method: 'PATCH', body: JSON.stringify({ status: sel.value }) });
+      loadStats();
+    }));
+    $$('.delBk').forEach((btn) => btn.addEventListener('click', async () => {
+      if (!window.confirm(t('confirmDel'))) return;
+      await api('/api/admin/bookings/' + btn.dataset.id, { method: 'DELETE' });
+      loadBookings(); loadStats();
+    }));
+  }
+
+  /* ---------- matches ---------- */
+  async function loadMatches() {
+    const r = await api('/api/admin/matches');
+    const rows = (r.data && r.data.matches) || [];
+    const tb = $('#mtRows');
+    if (!rows.length) { tb.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--muted-2);padding:30px">${esc(t('mt.none'))}</td></tr>`; return; }
+    tb.innerHTML = rows.map((m) => `<tr>
+      <td class="mono">${esc(m.kickoff)}</td>
+      <td>${esc(m.competition)}</td>
+      <td style="font-weight:600">${esc(m.team_a)} vs ${esc(m.team_b)}</td>
+      <td style="color:var(--muted)">${esc(m.note || '—')}</td>
+      <td><button class="iconbtn delMt" data-id="${m.id}"><svg><use href="#i-trash"/></svg></button></td>
+    </tr>`).join('');
+    $$('.delMt').forEach((b) => b.addEventListener('click', async () => {
+      await api('/api/admin/matches/' + b.dataset.id, { method: 'DELETE' });
+      loadMatches();
+    }));
+  }
+
+  async function addMatch() {
+    const body = {
+      competition: $('#mComp').value.trim(), teamA: $('#mA').value.trim(),
+      teamB: $('#mB').value.trim(), kickoff: $('#mKick').value, note: $('#mNote').value.trim()
+    };
+    if (!body.competition || !body.teamA || !body.teamB || !body.kickoff) {
+      return alertBox($('#mAlert'), 'err', t('mt.err'));
+    }
+    const r = await api('/api/admin/matches', { method: 'POST', body: JSON.stringify(body) });
+    if (r.ok) {
+      alertBox($('#mAlert'), '', '');
+      ['#mComp','#mA','#mB','#mKick','#mNote'].forEach((s) => { $(s).value = ''; });
+      loadMatches();
+    } else alertBox($('#mAlert'), 'err', t('mt.err'));
+  }
+
+  /* ---------- blackouts ---------- */
+  async function loadBlackouts() {
+    const r = await api('/api/admin/blackouts');
+    const rows = (r.data && r.data.blackouts) || [];
+    const tb = $('#boRows');
+    if (!rows.length) { tb.innerHTML = `<tr><td colspan="3" style="text-align:center;color:var(--muted-2);padding:30px">${esc(t('bo.none'))}</td></tr>`; return; }
+    tb.innerHTML = rows.map((b) => `<tr>
+      <td class="mono">${esc(b.date)}</td><td style="color:var(--muted)">${esc(b.reason || '—')}</td>
+      <td><button class="iconbtn delBo" data-d="${esc(b.date)}"><svg><use href="#i-trash"/></svg></button></td>
+    </tr>`).join('');
+    $$('.delBo').forEach((btn) => btn.addEventListener('click', async () => {
+      await api('/api/admin/blackouts/' + btn.dataset.d, { method: 'DELETE' });
+      loadBlackouts();
+    }));
+  }
+
+  /* ---------- messages ---------- */
+  async function loadMessages() {
+    const r = await api('/api/admin/messages');
+    const rows = (r.data && r.data.messages) || [];
+    const tb = $('#msRows');
+    if (!rows.length) { tb.innerHTML = `<tr><td colspan="5" style="text-align:center;color:var(--muted-2);padding:30px">${esc(t('ms.none'))}</td></tr>`; return; }
+    tb.innerHTML = rows.map((m) => `<tr style="${m.handled ? 'opacity:.5' : ''}">
+      <td class="mono">${esc(String(m.created_at).slice(0, 16).replace('T', ' '))}</td>
+      <td>${esc(m.name)}</td><td class="mono" dir="ltr">${esc(m.contact)}</td>
+      <td style="max-width:380px;color:var(--muted)">${esc(m.message)}</td>
+      <td>${m.handled ? '✓' : `<button class="btn btn-ghost btn-sm doneMs" data-id="${m.id}">${esc(t('ms.done'))}</button>`}</td>
+    </tr>`).join('');
+    $$('.doneMs').forEach((b) => b.addEventListener('click', async () => {
+      await api('/api/admin/messages/' + b.dataset.id + '/handled', { method: 'POST' });
+      loadMessages();
+    }));
+  }
+
+  function refreshAll() { loadStats(); loadBookings(); loadMatches(); loadBlackouts(); loadMessages(); }
+
+  /* ---------- wiring ---------- */
+  document.addEventListener('DOMContentLoaded', () => {
+    applyLang('ar');
+    checkAuth();
+
+    $('#loginBtn').addEventListener('click', login);
+    $('#pw').addEventListener('keydown', (e) => { if (e.key === 'Enter') login(); });
+    $('#langBtn').addEventListener('click', () => applyLang(LANG === 'ar' ? 'en' : 'ar'));
+    $('#logoutBtn').addEventListener('click', async () => { await api('/api/admin/logout', { method: 'POST' }); checkAuth(); });
+
+    $$('.admin-tabs button').forEach((b) => b.addEventListener('click', () => {
+      $$('.admin-tabs button').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      $$('[data-panel]').forEach((p) => { p.style.display = p.dataset.panel === b.dataset.tab ? 'block' : 'none'; });
+    }));
+
+    $('#applyF').addEventListener('click', loadBookings);
+    $('#fQ').addEventListener('keydown', (e) => { if (e.key === 'Enter') loadBookings(); });
+    $('#todayF').addEventListener('click', () => {
+      const d = new Date();
+      const s = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+      $('#fFrom').value = s; $('#fTo').value = s; $('#fStatus').value = 'all';
+      loadBookings();
+    });
+    $('#addMatch').addEventListener('click', addMatch);
+    $('#addBo').addEventListener('click', async () => {
+      if (!$('#boDate').value) return;
+      await api('/api/admin/blackouts', { method: 'POST', body: JSON.stringify({ date: $('#boDate').value, reason: $('#boReason').value.trim() }) });
+      $('#boDate').value = ''; $('#boReason').value = '';
+      loadBlackouts();
+    });
+
+    setInterval(() => { if ($('#dashView').style.display !== 'none') { loadStats(); loadBookings(); } }, 60000);
+  });
+})();
+</script>
+</body>
+</html>

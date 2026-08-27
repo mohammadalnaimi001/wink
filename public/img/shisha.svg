@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Shisha">
+<defs><linearGradient id="b3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f2118"/><stop offset="1" stop-color="#16100c"/></linearGradient>
+<linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7fa8c9" stop-opacity=".85"/><stop offset="1" stop-color="#3f6480" stop-opacity=".7"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#b3)"/>
+<circle cx="200" cy="200" r="146" fill="none" stroke="#d9ab6a" stroke-opacity=".12" stroke-width="1.5"/>
+<ellipse cx="200" cy="352" rx="86" ry="14" fill="#000" opacity=".35"/>
+<path d="M164 256c0-30 72-30 72 0v52c0 22-16 36-36 36s-36-14-36-36z" fill="url(#gl)"/>
+<path d="M180 268c0 0-6 34 4 54" stroke="#cfe4f2" stroke-opacity=".45" stroke-width="6" fill="none" stroke-linecap="round"/>
+<rect x="188" y="120" width="24" height="140" rx="8" fill="#d9ab6a"/>
+<rect x="176" y="112" width="48" height="16" rx="7" fill="#b98a45"/>
+<rect x="182" y="82" width="36" height="34" rx="9" fill="#8a6b3e"/>
+<path d="M176 76h48l-8 10h-32z" fill="#c8763f"/>
+<ellipse cx="200" cy="74" rx="26" ry="8" fill="#5c4227"/>
+<circle cx="188" cy="70" r="6" fill="#c8763f"/><circle cx="204" cy="68" r="6" fill="#e08a4a"/><circle cx="214" cy="72" r="5" fill="#c8763f"/>
+<path d="M212 168c40 6 62 34 58 66-3 24-24 40-44 38" fill="none" stroke="#8a6b3e" stroke-width="11" stroke-linecap="round"/>
+<rect x="216" y="262" width="32" height="14" rx="7" fill="#d9ab6a" transform="rotate(12 232 269)"/>
+<g fill="none" stroke="#f0d5a4" stroke-opacity=".3" stroke-width="5" stroke-linecap="round">
+<path d="M164 56c-8-12 6-18 0-30"/><path d="M200 44c-8-12 6-18 0-30"/><path d="M236 56c-8-12 6-18 0-30"/>
+</g>
+</svg>

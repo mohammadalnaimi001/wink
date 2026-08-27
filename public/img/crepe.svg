@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Crepe with chocolate">
+<defs>
+<linearGradient id="b5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a271b"/><stop offset="1" stop-color="#191109"/></linearGradient>
+<linearGradient id="cp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2d6a6"/><stop offset="1" stop-color="#cba268"/></linearGradient>
+<linearGradient id="cp2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5c390"/><stop offset="1" stop-color="#b98e56"/></linearGradient>
+</defs>
+<rect width="400" height="400" fill="url(#b5)"/>
+<circle cx="200" cy="200" r="140" fill="none" stroke="#d9ab6a" stroke-opacity=".13" stroke-width="1.5"/>
+<circle cx="200" cy="200" r="112" fill="none" stroke="#d9ab6a" stroke-opacity=".08" stroke-width="1.5"/>
+<ellipse cx="200" cy="320" rx="122" ry="20" fill="#000" opacity=".3"/>
+<ellipse cx="200" cy="296" rx="130" ry="30" fill="#241811"/>
+<ellipse cx="200" cy="290" rx="130" ry="28" fill="#3f2c21"/>
+<ellipse cx="200" cy="288" rx="108" ry="21" fill="#4c372a"/>
+<path d="M96 286c0-6 8-10 18-14l70-84c9-11 23-11 32 0l70 84c10 4 18 8 18 14 0 8-46 14-104 14S96 294 96 286z" fill="url(#cp)"/>
+<path d="M200 180c9 0 18 4 18 4l68 88c10 4 18 8 18 14 0 8-46 14-104 14z" fill="url(#cp2)" opacity=".75"/>
+<path d="M156 244c26 12 62 12 88 0" stroke="#5a3418" stroke-width="9" fill="none" stroke-linecap="round" opacity=".7"/>
+<path d="M170 214c20 9 42 9 60 0" stroke="#5a3418" stroke-width="8" fill="none" stroke-linecap="round" opacity=".55"/>
+<path d="M186 182c10 5 20 5 28 0" stroke="#5a3418" stroke-width="7" fill="none" stroke-linecap="round" opacity=".45"/>
+<path d="M126 278c22 8 48 12 74 12s52-4 74-12" stroke="#4a2a12" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/>
+<circle cx="200" cy="122" r="19" fill="#faf3e6"/>
+<circle cx="200" cy="118" r="8" fill="#e7b7c4"/>
+<path d="M200 102c5-15 16-18 25-16" stroke="#6fae87" stroke-width="6" fill="none" stroke-linecap="round"/>
+<circle cx="148" cy="272" r="12" fill="#c8443f"/>
+<circle cx="252" cy="268" r="10" fill="#8e5cc0"/>
+<circle cx="286" cy="278" r="8" fill="#c8443f" opacity=".85"/>
+<circle cx="116" cy="280" r="7" fill="#8e5cc0" opacity=".85"/>
+</svg>
